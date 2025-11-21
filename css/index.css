@@ -2672,7 +2672,7 @@ i.anzhiyu-icon-hashtag {
   --preloader-color: #fff;
   --tab-border-color: #f0f0f0;
   --tab-botton-bg: #f0f0f0;
-  --tab-botton-color: #1f2d3d;
+  --tab-botton-color: #222;
   --tab-button-hover-bg: #dcdcdc;
   --tab-button-active-bg: #fff;
   --card-bg: #fff;
@@ -2684,7 +2684,7 @@ i.anzhiyu-icon-hashtag {
   --light-grey: #eee;
   --dark-grey: #cacaca;
   --white: #fff;
-  --text-highlight-color: #1f2d3d;
+  --text-highlight-color: #222;
   --blockquote-color: #6a737d;
   --blockquote-bg: rgba(66,90,239,0.1);
   --reward-pop: #f5f5f5;
@@ -2959,7 +2959,7 @@ button {
   touch-action: manipulation;
 }
 a {
-  color: var(--anzhiyu-fontcolor);
+  color: #333;
   text-decoration: none;
   word-wrap: break-word;
   -webkit-transition: all 0.2s ease 0s;
@@ -20192,6 +20192,7 @@ body[data-type="album"] #page .page-title {
   }
 }
 
+/* 基础样式设置 */
 h1#site-title {
   font-size: 3em !important;
 }
@@ -20199,7 +20200,6 @@ h1#site-title {
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 3em;
-  /* 可以定义图标大小 */
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20209,7 +20209,6 @@ h1#site-title {
 svg.icon {
   width: 1em;
   height: 1em;
-  /* width和height定义图标的默认宽度和高度*/
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
@@ -20225,64 +20224,45 @@ svg.icon {
   height: 1.5em;
 }
 
-/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
-/* #page-header:not(.not-top-img):before {
-  background-color: transparent !important;
-} */
-
-/* 文章页面正文背景 */
-div#post {
-  background: rgba(255, 255, 255, 0.9);
-}
-#recent-posts > .recent-post-item:not(:first-child):active {
-  transform: scale(0.97);
-}
-/* 分页页面 */
-div#page {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-/* 归档页面 */
-div#archive {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-/* 标签页面 */
-div#tag {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-/* 分类页面 */
+/* 页面背景设置 */
+div#post,
+div#page,
+div#archive,
+div#tag,
 div#category {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/*夜间模式伪类遮罩层透明*/
-[data-theme="dark"] #recent-posts > .recent-post-item {
-  background: #121212;
+/* 文章卡片样式 */
+#recent-posts > .recent-post-item:not(:first-child):active {
+  transform: scale(0.97);
 }
 
-[data-theme="dark"] .card-widget {
+#recent-posts .recent-post-item {
+  height: fit-content;
   background: var(--anzhiyu-card-bg);
+  border-radius: 12px;
+  cursor: pointer;
+  border: var(--style-border);
+  box-shadow: var(--anzhiyu-shadow-border);
+  user-select: none;
 }
 
-[data-theme="dark"] div#post {
-  background: var(--anzhiyu-card-bg);
+#recent-posts .recent-post-item:hover {
+  border: var(--style-border-hover);
 }
 
-[data-theme="dark"] div#tag {
-  background: var(--anzhiyu-card-bg);
+#recent-posts .recent-post-item:hover .recent-post-info .article-title {
+  color: var(--anzhiyu-theme);
 }
 
-[data-theme="dark"] div#archive {
-  background: var(--anzhiyu-card-bg);
-}
-
+/* 夜间模式样式 */
+[data-theme="dark"] #recent-posts > .recent-post-item,
+[data-theme="dark"] .card-widget,
+[data-theme="dark"] div#post,
+[data-theme="dark"] div#tag,
+[data-theme="dark"] div#archive,
 [data-theme="dark"] div#page {
-  background: var(--anzhiyu-card-bg);
-}
-
-[data-theme="dark"] div#category {
   background: var(--anzhiyu-card-bg);
 }
 
@@ -20290,23 +20270,13 @@ div#category {
   background: transparent !important;
 }
 
-/* md网站下划线 */
+[data-theme="dark"] #footer:before {
+  content: none;
+}
+
+/* 链接样式 */
 #article-container a:hover {
   text-decoration: none !important;
-}
-
-#article-container #hpp_talk p img {
-  display: inline;
-}
-
-/* 宽屏适配 */
-.page .layout,
-.post .layout {
-  max-width: 1400px;
-}
-
-.card-widget.card-clock {
-  font-size: 14px;
 }
 
 #article-container
@@ -20320,6 +20290,7 @@ div#category {
   text-decoration: none;
   font-family: inherit;
 }
+
 #article-container
   a:not([data-fancybox="gallery"]):not(.headerlink):not(.cf-friends-link):not(.btn-anzhiyu):not(
     .no-text-decoration
@@ -20331,58 +20302,51 @@ div#category {
   text-decoration: none;
 }
 
+#article-container #hpp_talk p img {
+  display: inline;
+}
+
+/* 布局与响应式 */
+.page .layout,
+.post .layout {
+  max-width: 1400px;
+}
+
+.card-widget.card-clock {
+  font-size: 14px;
+}
+
 html.hide-aside .layout > div:first-child {
   width: 100%;
 }
 
-/* 动画wowjs兼容调整 */
-.animate__animated {
-  -webkit-animation-fill-mode: backwards !important;
-  animation-fill-mode: backwards !important;
-}
-
-/* 文章hover边框 */
-#recent-posts .recent-post-item:hover {
-  border: var(--style-border-hover);
-}
-#recent-posts .recent-post-item:hover .recent-post-info .article-title {
-  color: var(--anzhiyu-theme);
-}
-#recent-posts .recent-post-item {
-  height: fit-content;
-  background: var(--anzhiyu-card-bg);
-  border-radius: 12px;
-  cursor: pointer;
-  border: var(--style-border);
-  box-shadow: var(--anzhiyu-shadow-border);
-  user-select: none;
-}
-/* 移动端容器padding */
+/* 移动端适配 */
 @media screen and (max-width: 768px) {
   #body-wrap .layout #page {
     padding: 20px 15px !important;
   }
+  
+  .layout > div:first-child:not(.recent-posts) {
+    border-radius: 12px 12px 0 0;
+  }
 }
-/* 首页文章宽度 */
+
 @media screen and (max-width: 1200px) {
   .layout > div:first-child {
     width: 100% !important;
   }
 }
 
-[data-theme="dark"] #footer:before {
-  content: none;
-}
-
-@media screen and (max-width: 768px) {
-  .layout > div:first-child:not(.recent-posts) {
-    border-radius: 12px 12px 0 0;
-  }
+/* 动画效果 */
+.animate__animated {
+  -webkit-animation-fill-mode: backwards !important;
+  animation-fill-mode: backwards !important;
 }
 
 .banners-title {
   animation: slide-in 0.6s 0.3s backwards;
 }
+
 #algolia-search .search-dialog {
   animation: slide-in 0.6s ease 0s 1 normal none running;
 }
@@ -20391,15 +20355,13 @@ html.hide-aside .layout > div:first-child {
   #page > div:not(.author-content-item) {
     animation: slide-in 0.6s 0.2s backwards;
   }
-}
-
-@media screen and (min-width: 1200px) {
+  
   .author-content-item {
     animation: slide-in 0.6s 0s backwards;
   }
 }
 
-/* 元素透明度改变 */
+/* 元素透明度改变动画 */
 @keyframes slide-in-op {
   from {
     opacity: 0;
@@ -20409,6 +20371,105 @@ html.hide-aside .layout > div:first-child {
   }
 }
 
+/* 日间模式样式 */
+[data-theme="light"] #recent-posts > .recent-post-item {
+  background: var(--anzhiyu-card-bg);
+}
+
+/* 顶部导航栏 */
+[data-theme="light"] #navbar,
+[data-theme="light"] #navbar.scroll {
+  --anzhiyu-navbar-fontcolor: #222222 !important;
+  --anzhiyu-navbar-iconcolor: #333333 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* 导航菜单文字 */
+[data-theme="light"] .navbar-menu .menu-item a,
+[data-theme="light"] .navbar-menu .menu-item span,
+[data-theme="light"] .dropdown-menu a {
+  color: #222222 !important;
+  opacity: 1 !important;
+}
+
+/* 顶部功能按钮 */
+[data-theme="light"] .navbar-right .iconfont,
+[data-theme="light"] .navbar-right .search-button,
+[data-theme="light"] .navbar-right .theme-switch,
+[data-theme="light"] .navbar-right .menus_btn,
+[data-theme="light"] #toggle-menu,
+[data-theme="light"] #toggle-menu i {
+  color: #333333 !important;
+  opacity: 1 !important;
+  font-size: 18px !important;
+  fill: #333333 !important;
+  --anzhiyu-icon-color: #333333 !important;
+}
+
+/* 网站名称 */
+[data-theme="light"] #site-name a {
+  color: #1a1a1a !important;
+  font-weight: 600 !important;
+}
+
+/* 文章标题 */
+[data-theme="light"] .post-title a,
+[data-theme="light"] #article-container h1,
+[data-theme="light"] #article-container h2,
+[data-theme="light"] #article-container h3,
+[data-theme="light"] .recent-post-info .article-title,
+[data-theme="light"] .post-title {
+  color: #1a1a1a !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+[data-theme="light"] .post-title {
+  font-weight: 700 !important;
+}
+
+/* 文章元信息 */
+[data-theme="light"] .post-meta,
+[data-theme="light"] .post-meta a,
+[data-theme="light"] .post-meta span,
+[data-theme="light"] .post-meta .post-meta-item,
+[data-theme="light"] .post-meta .post-meta-item *,
+[data-theme="light"] #post-meta,
+[data-theme="light"] #post-meta .meta-firstline,
+[data-theme="light"] #post-meta .post-meta-item,
+[data-theme="light"] #post-meta .anzhiyu-icon,
+[data-theme="light"] #post-meta .post-meta-label,
+[data-theme="light"] #post-meta .post-meta-date {
+  color: #444444 !important;
+  opacity: 1 !important;
+  filter: alpha(opacity=100) !important;
+  font-weight: 500 !important;
+}
+
+/* 侧边栏文字 */
+[data-theme="light"] .card-widget .card-content a,
+[data-theme="light"] .card-widget .card-content span,
+[data-theme="light"] .card-widget .card-title {
+  color: #333333 !important;
+  opacity: 1 !important;
+}
+
+/* 全局链接 */
+[data-theme="light"] a {
+  color: #2d3748 !important;
+  opacity: 1 !important;
+}
+
+/* 首页顶部大图遮罩 */
+[data-theme="light"] #page-header:not(.not-top-img):before {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 分类标签 */
+[data-theme="light"] .post-meta .post-meta-item .post-meta__tag {
+  color: #555555 !important;
+  border-color: #bbbbbb !important;
+}
 #aside-content .card-widget#card-wechat {
   background: #57bd6a;
   display: flex;
