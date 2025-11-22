@@ -10442,7 +10442,8 @@ h1.page-title + .tag-cloud-list {
   padding: 1rem;
   color: var(--anzhiyu-fontcolor);
   margin-top: 1rem;
-  background: var(--anzhiyu-secondbg);
+  background: "#ffffffff";
+/* 将底部版权栏背景改为白色 */
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -10778,6 +10779,20 @@ h1.page-title + .tag-cloud-list {
     background: -o-linear-gradient(270deg, var(--anzhiyu-background) 0%, var(--anzhiyu-card-bg) 25%);
     background: -ms-linear-gradient(270deg, var(--anzhiyu-background) 0%, var(--anzhiyu-card-bg) 25%);
     background: linear-gradient(180deg, var(--anzhiyu-background) 0%, var(--anzhiyu-card-bg) 25%);
+  }
+}
+#footer-bar .copyright {
+  font-size: 14px;
+  color: var(--anzhiyu-fontcolor);
+  margin: 0 auto;
+  padding: 8px 0;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #footer-bar .copyright {
+    font-size: 12px;
+    margin-top: 10px;
+    width: 100%;
   }
 }
 #page-header {
