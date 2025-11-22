@@ -20485,6 +20485,31 @@ html.hide-aside .layout > div:first-child {
   color: #555555 !important;
   border-color: #bbbbbb !important;
 }
+
+/* 精确隐藏技能区域的彩色方块 */
+.tags-group-icon {
+  display: none !important; /* 完全隐藏方块 */
+  opacity: 0 !important;    /* 双重保险：设置透明度为0 */
+  width: 0 !important;      /* 消除宽度 */
+  height: 0 !important;     /* 消除高度 */
+}
+
+/* 确保技能标签正常显示 */
+.skills-list,
+.tags-group-wrapper .skill-tag,
+.tags-group-wrapper .creativity-item {
+  opacity: 1 !important;    /* 强制显示 */
+  transform: none !important; /* 取消任何位移或缩放 */
+  z-index: 10 !important;   /* 确保在最上层显示 */
+  position: relative !important;
+}
+
+/* 调整技能区域布局，避免隐藏方块后出现空白 */
+.skills-style-group,
+.tags-group-all {
+  min-height: auto !important;
+  padding: 10px 0 !important;
+}
 #aside-content .card-widget#card-wechat {
   background: #57bd6a;
   display: flex;
