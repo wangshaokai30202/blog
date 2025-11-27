@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>markdown基本语法</title>
+      <link href="/2025/11/27/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+      <url>/2025/11/27/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h1><p>几乎所有 Markdown 应用程序都支持原始 Markdown 设计文档中列出的 Markdown 基本语法。但是，Markdown 处理程序之间存在着细微的变化和差异，我们都会尽可能给出提示。</p><p>文章来源于<a href="https://www.markdown.xyz/basic-syntax/#links">Markdown指南中文版</a></p><h1 id="标题（Headings）"><a href="#标题（Headings）" class="headerlink" title="标题（Headings）"></a>标题（Headings）</h1><p>要创建标题，请在单词或短语前面添加井号 (#) 。井号的数量代表了标题的级别。例如，添加三个井号即创建一个三级标题 (<h3>) (例如：### My Header)。<br>注意：（＃）与文字中间要添加一个空格。</p><h1 id="段落（Paragraphs）"><a href="#段落（Paragraphs）" class="headerlink" title="段落（Paragraphs）"></a>段落（Paragraphs）</h1><p>要创建段落，请使用空白行将一行或多行文本进行分隔。除非 段落在列表中，否则不要用空格（spaces）或制表符（ tabs）缩进段落。</p><h1 id="换行（Line-Breaks）"><a href="#换行（Line-Breaks）" class="headerlink" title="换行（Line Breaks）"></a>换行（Line Breaks）</h1><p>在一行的末尾添加两个或多个空格，然后按回车键（return），即可创建一个换行（line break）或新行 (<br>)。<br>几乎每个 Markdown 应用程序都支持两个或多个空格进行换行 (称为 “结尾空格（trailing whitespace）”) 的方式，但这是有争议的，因为很难在编辑器中直接看到空格，并且很多人在每个句子后面都会有意或无意地添加两个空格。由于这个原因，你可能需要使用除结尾空格以外的其它方式来进行换行。如果你所使用的 Markdown 应用程序 支持 HTML 的话，你可以使用 HTML 的 <br> 标签来实现换行。<br>为了兼容性，请在行尾添加“结尾空格”或 HTML 的 <br> 标签来实现换行。</p><h1 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h1><p>通过将文本设置为粗体或斜体来强调其重要性。</p><ol><li><p>粗体<br>  要加粗文本，请在单词或短语的前后各添加<strong>两个星号</strong>（asterisks）或下划线（underscores）。如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。</p></li><li><p>斜体<br>  要用斜体显示文本，请在单词或短语前后添加<em>一个星号</em>（asterisk）或下划线（underscore）。要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。</p></li><li><p>粗体斜体同时应用<br>  要同时用粗体和斜体突出显示文本，请在单词或短语的前后各<em><strong>添加三个星号</strong></em>或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。</p></li></ol><h1 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h1><p>要创建块引用，请在段落前添加一个 &gt; 符号。注意：&gt;与文本中间要有空格。  </p><blockquote><p>块引用演示</p></blockquote><h2 id="多个段落的块引用"><a href="#多个段落的块引用" class="headerlink" title="多个段落的块引用"></a>多个段落的块引用</h2><p>块引用可以包含多个段落。为两个段落最前面及段落之间的空白行各添加一个 &gt; 符号。</p><h2 id="嵌套块引用"><a href="#嵌套块引用" class="headerlink" title="嵌套块引用"></a>嵌套块引用</h2><p>块引用可以嵌套。在要嵌套的段落前添加一个 &gt;&gt; 符号。<br>示例：</p><blockquote><blockquote><p>Dorothy followed her through many of the beautiful rooms in her castle.</p><blockquote><p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p></blockquote></blockquote></blockquote><h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。1. 1. 2. 。。。</p><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。</p><h3 id="以数字开头的无序列表项"><a href="#以数字开头的无序列表项" class="headerlink" title="以数字开头的无序列表项"></a>以数字开头的无序列表项</h3><p>如果你需要以数字开头并且紧跟一个英文句号（也就是 .）的无序列表项，则可以使使用反斜线（\）来 转义 这个英文句号。</p><blockquote><p>示例：</p><ul><li>1968. A great year!</li><li>I think 1969 was second best.</li></ul></blockquote><h3 id="列表中添加代码块-图片-二级列表"><a href="#列表中添加代码块-图片-二级列表" class="headerlink" title="列表中添加代码块&#x2F;图片&#x2F;二级列表"></a>列表中添加代码块&#x2F;图片&#x2F;二级列表</h3><p>代码块（Code blocks） 通常采用四个空格或一个制表符缩进。当它们被放在列表中时，请将它们缩进八个空格或两个制表符。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>要将单词或短语表示为代码，请将其包裹在反引号 (&#96;) 中。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2025年底日程表</title>
       <link href="/2025/11/23/2025%E5%B9%B4%E5%BA%95%E6%97%A5%E7%A8%8B%E8%A1%A8/"/>
       <url>/2025/11/23/2025%E5%B9%B4%E5%BA%95%E6%97%A5%E7%A8%8B%E8%A1%A8/</url>
