@@ -1,0 +1,4 @@
+/* 隐藏整个页脚区域，包括灰边和所有内容 */
+#footer {
+  display: none !important;
+}
