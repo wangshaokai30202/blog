@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>测试111</title>
-      <link href="/2025/11/29/%E6%B5%8B%E8%AF%95111/"/>
-      <url>/2025/11/29/%E6%B5%8B%E8%AF%95111/</url>
-      
-        <content type="html"><![CDATA[<p>测试中！！！<br>测试GitHub上传~</p><p>第二vi傻瓜穿上传</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>markdown基本语法</title>
       <link href="/2025/11/27/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
       <url>/2025/11/27/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
@@ -109,56 +96,6 @@
         <tags>
             
             <tag> 技术学习 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>封面图测试</title>
-      <link href="/2025/11/10/%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2/"/>
-      <url>/2025/11/10/%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2/</url>
-      
-        <content type="html"><![CDATA[<p>怎么添加封面图哇？<br><img src="https://wangshaokai040813blog.cfd/wangshaokai/%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.png" alt="测试"></p><h1 id="标题一测试"><a href="#标题一测试" class="headerlink" title="标题一测试"></a>标题一测试</h1><h2 id="小标题测试"><a href="#小标题测试" class="headerlink" title="小标题测试"></a>小标题测试</h2><p>  正文测试！！！  </p><h1 id="标题二测试"><a href="#标题二测试" class="headerlink" title="标题二测试"></a>标题二测试</h1><p>  正文  </p><h1 id="标题三测试"><a href="#标题三测试" class="headerlink" title="标题三测试"></a>标题三测试</h1><p>  正文</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 博客 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 博客 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的第一篇文章</title>
-      <link href="/2025/11/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/"/>
-      <url>/2025/11/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
-      
-        <content type="html"><![CDATA[<p>这是我第一篇写在 Hexo 博客上的文章。<br><img src="https://wangshaokai040813blog.cfd/wangshaokai/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="测试图像"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 日记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 生活 </tag>
             
         </tags>
       
